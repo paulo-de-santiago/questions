@@ -10,8 +10,15 @@ questions.forEach(function (question) {
   //  console.log(btn);
 
   // add eventListener to button so question will toggle
-
   btn?.addEventListener("click", function () {
+    questions.forEach(function (item) {
+      //console.log(item);
+
+      if (item !== question) {
+        item.classList.remove("show-text");
+      }
+    });
+
     question.classList.toggle("show-text");
   });
 });
